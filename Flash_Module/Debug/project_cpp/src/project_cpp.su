@@ -1,3 +1,1 @@
-../project_cpp/src/project_cpp.cpp:17:6:void main_cpp()	40	static
-../project_cpp/src/project_cpp.cpp:64:1:void __static_initialization_and_destruction_0(int, int)	16	static
-../project_cpp/src/project_cpp.cpp:64:1:cpp)	8	static
+../project_cpp/src/project_cpp.cpp:16:6:void main_cpp()	256	static

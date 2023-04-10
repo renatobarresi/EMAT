@@ -28,7 +28,10 @@ project_cpp/src/project_cpp.o: ../project_cpp/src/project_cpp.cpp \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h \
- /home/renatobarresi/Renato/CESE_fiuba/Tesis/Code/Flash_Module/modules/inc/spi_module.h
+ /home/renatobarresi/Renato/CESE_fiuba/Tesis/Code/Flash_Module/modules/inc/spi_module.h \
+ /home/renatobarresi/Renato/CESE_fiuba/Tesis/Code/Flash_Module/modules/inc/filesystem.h \
+ /home/renatobarresi/Renato/CESE_fiuba/Tesis/Code/Flash_Module/modules/inc/../../Middleware/littleFS/inc/lfs.h \
+ /home/renatobarresi/Renato/CESE_fiuba/Tesis/Code/Flash_Module/modules/inc/../../Middleware/littleFS/inc/lfs_util.h
 /home/renatobarresi/Renato/CESE_fiuba/Tesis/Code/Flash_Module/project_cpp/inc/project_cpp.h:
 /home/renatobarresi/Renato/CESE_fiuba/Tesis/Code/Flash_Module/modules/inc/W25Qx_module.h:
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:
@@ -59,3 +62,6 @@ project_cpp/src/project_cpp.o: ../project_cpp/src/project_cpp.cpp \
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h:
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h:
 /home/renatobarresi/Renato/CESE_fiuba/Tesis/Code/Flash_Module/modules/inc/spi_module.h:
+/home/renatobarresi/Renato/CESE_fiuba/Tesis/Code/Flash_Module/modules/inc/filesystem.h:
+/home/renatobarresi/Renato/CESE_fiuba/Tesis/Code/Flash_Module/modules/inc/../../Middleware/littleFS/inc/lfs.h:
+/home/renatobarresi/Renato/CESE_fiuba/Tesis/Code/Flash_Module/modules/inc/../../Middleware/littleFS/inc/lfs_util.h:

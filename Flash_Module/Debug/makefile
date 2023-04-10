@@ -11,6 +11,7 @@ RM := rm -rf
 -include sources.mk
 -include project_cpp/src/subdir.mk
 -include modules/src/subdir.mk
+-include Middleware/littleFS/src/subdir.mk
 -include Drivers/STM32F4xx_HAL_Driver/Src/subdir.mk
 -include Core/Startup/subdir.mk
 -include Core/Src/subdir.mk

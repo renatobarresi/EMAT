@@ -6,14 +6,17 @@
 # Add inputs and outputs from these tool invocations to the build variables 
 CPP_SRCS += \
 ../modules/src/W25Qx_module.cpp \
+../modules/src/filesystem.cpp \
 ../modules/src/spi_module.cpp 
 
 OBJS += \
 ./modules/src/W25Qx_module.o \
+./modules/src/filesystem.o \
 ./modules/src/spi_module.o 
 
 CPP_DEPS += \
 ./modules/src/W25Qx_module.d \
+./modules/src/filesystem.d \
 ./modules/src/spi_module.d 
 
 
@@ -24,7 +27,7 @@ modules/src/%.o modules/src/%.su: ../modules/src/%.cpp modules/src/subdir.mk
 clean: clean-modules-2f-src
 
 clean-modules-2f-src:
-	-$(RM) ./modules/src/W25Qx_module.d ./modules/src/W25Qx_module.o ./modules/src/W25Qx_module.su ./modules/src/spi_module.d ./modules/src/spi_module.o ./modules/src/spi_module.su
+	-$(RM) ./modules/src/W25Qx_module.d ./modules/src/W25Qx_module.o ./modules/src/W25Qx_module.su ./modules/src/filesystem.d ./modules/src/filesystem.o ./modules/src/filesystem.su ./modules/src/spi_module.d ./modules/src/spi_module.o ./modules/src/spi_module.su
 
 .PHONY: clean-modules-2f-src
 
