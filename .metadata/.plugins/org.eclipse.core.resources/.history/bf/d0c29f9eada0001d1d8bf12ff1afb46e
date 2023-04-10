@@ -1,0 +1,24 @@
+/*
+ * uart_api.c
+ *
+ *  Created on: Jan 27, 2023
+ *      Author: renatobarresi
+ *
+ *
+ */
+
+#include <iostream>
+
+#include "stm32f4xx_hal.h"
+
+class UART{
+	UART(UART_HandleTypeDef* huart){
+		this->huart = huart;
+	}
+
+	HAL_StatusTypeDef init(uint16_t baudrate){
+
+	}
+};
+
+

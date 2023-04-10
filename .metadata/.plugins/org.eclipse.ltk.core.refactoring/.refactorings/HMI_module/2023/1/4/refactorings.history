@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;HMI_module/Core/Src/uart_api.c&apos; to &apos;uart_api.cpp&apos;" description="Rename resource &apos;uart_api.c&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Core/Src/uart_api.c" name="uart_api.cpp" stamp="1674838635422" updateReferences="true"/>
+</session>

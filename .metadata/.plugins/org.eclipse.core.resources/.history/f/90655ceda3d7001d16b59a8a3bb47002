@@ -1,0 +1,24 @@
+/*
+ * project_cpp.cpp
+ *
+ *  Created on: Mar 19, 2023
+ *      Author: renatobarresi
+ */
+
+#include "project_cpp.h"
+#include "W25Qx_module.h"
+
+SPI_HandleTypeDef hspi1;
+
+W25Q64 myFlash(&hspi1, GPIOF, 12);
+
+void main_cpp(void)
+{
+	if (mySPI.init() == HAL_ERROR)
+	{
+		while(1);
+	}
+	while(1)
+	{
+	}
+}

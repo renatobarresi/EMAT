@@ -1,0 +1,99 @@
+/*
+ * hmi_module.cpp
+ *
+ *  Created on: Mar 19, 2023
+ *      Author: renatobarresi
+ */
+
+/* Includes */
+
+#include "hmi_module.h"
+#include "serialPort_module.h"
+#include <cstring>
+
+/* Private variables */
+
+static const char *banner = "E.M.A.T";
+static const char *clearScreenBuff = "\033[2J";
+static const char *moveCursorOrigin = "\033[1;1H";
+
+/* Private functions */
+
+/* Private methods */
+
+/* Constructor */
+
+/**
+ * @brief
+ */
+humanMachineInterface::humanMachineInterface(USART_TypeDef *instance, UART_HandleTypeDef *uartHandler, uint32_t baudrate)
+	: mySerialPort(instance, uartHandler, baudrate)
+{
+	this->instance = instance;
+	this->uartHandler = uartHandler;
+	this->baudrate = baudrate;
+}
+
+/* Public methods */
+
+/**
+ * @brief
+ */
+bool humanMachineInterface::init()
+{
+	return mySerialPort.init();
+}
+
+/**
+ * @brief
+ */
+bool humanMachineInterface::print(const std::string &pBuff)
+{
+	return mySerialPort.write(pBuff);
+}
+
+/**
+ * @brief Process the received command via the serial port
+ */
+void humanMachineInterface::processCommand()
+{
+
+}
+
+void humanMachineInterface::printWelcomeBanner()
+{
+	print(banner);
+}
+void humanMachineInterface::clearScreen()
+{
+	print(clearScreenBuff);
+	print(moveCursorOrigin);
+}
+void humanMachineInterface::printTime()
+{
+
+}
+void humanMachineInterface::printDeviceInfo()
+{
+
+}
+void humanMachineInterface::printCommands()
+{
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

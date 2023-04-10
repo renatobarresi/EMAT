@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;HMI_module/Core/Inc/uart_api.h&apos; to &apos;uart_api.hpp&apos;" description="Rename resource &apos;uart_api.h&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Core/Inc/uart_api.h" name="uart_api.hpp" stamp="1675090463260" updateReferences="true"/>&#x0A;<refactoring comment="Rename resource &apos;HMI_module/Core/Inc/uart_api.hpp&apos; to &apos;uart_api.h&apos;" description="Rename resource &apos;uart_api.hpp&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Core/Inc/uart_api.hpp" name="uart_api.h" stamp="1675090479446" updateReferences="true"/>
+</session>

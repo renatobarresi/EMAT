@@ -1,0 +1,22 @@
+/*
+ * uart_api.h
+ *
+ *  Created on: Jan 27, 2023
+ *      Author: renatobarresi
+ */
+
+#ifndef INC_UART_API_H_
+#define INC_UART_API_H_
+
+#include <iostream>
+
+#include "stm32f4xx_hal.h"
+
+class UART{
+public:
+	UART(uint32_t * uartAddr);
+	HAL_StatusTypeDef init(uint16_t baudrate);
+};
+
+
+#endif /* INC_UART_API_H_ */

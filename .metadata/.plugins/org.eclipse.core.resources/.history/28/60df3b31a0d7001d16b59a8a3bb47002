@@ -1,0 +1,75 @@
+/*
+ * W25Qx_module.cpp
+ *
+ *  Created on: Apr 5, 2023
+ *      Author: renatobarresi
+ */
+#include "W25Qx_module.h"
+
+/*Constructor*/
+W25Q64::W25Q64(SPI_HandleTypeDef *hspi, GPIO_TypeDef *cs_gpio_port, uint16_t cs_pin)
+	: mySPIPort(this->hspi, this->csPin, this->csGPIOPort)
+{
+	this->hspi = hspi;
+	this->csPin = cs_pin;
+	this->csGPIOPort = cs_gpio_port;
+}
+
+/* Public methods */
+void W25Q64::write_enable()
+{
+
+}
+
+void W25Q64::write_disable()
+{
+
+}
+
+uint8_t W25Q64::read_status_register()
+{
+
+}
+void W25Q64::write_status_register(uint8_t status)
+{
+
+}
+void W25Q64::chip_erase()
+{
+
+}
+
+void W25Q64::sector_erase(uint32_t addr)
+{
+
+}
+
+void W25Q64::block_erase(uint32_t addr)
+{
+
+}
+
+void W25Q64::page_program(uint32_t addr, uint8_t *data, uint16_t size)
+{
+
+}
+
+void W25Q64::read_data(uint32_t addr, uint8_t *data, uint16_t size)
+{
+
+}
+
+void W25Q64::wait_until_ready()
+{
+
+}
+
+/* Private methods */
+void W25Q64::cs_select()
+{
+
+}
+void W25Q64::cs_deselect()
+{
+
+}

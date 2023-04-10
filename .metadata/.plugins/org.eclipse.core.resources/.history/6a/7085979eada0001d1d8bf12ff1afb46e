@@ -1,0 +1,15 @@
+/*
+ * uart_api.h
+ *
+ *  Created on: Jan 27, 2023
+ *      Author: renatobarresi
+ */
+
+#ifndef INC_UART_API_H_
+#define INC_UART_API_H_
+
+
+
+
+
+#endif /* INC_UART_API_H_ */

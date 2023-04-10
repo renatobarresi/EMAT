@@ -1,0 +1,16 @@
+/*
+ * uart_api.c
+ *
+ *  Created on: Jan 27, 2023
+ *      Author: renatobarresi
+ */
+
+#include <iostream>
+
+#include "stm32f4xx_hal_conf.h"
+
+class UART{
+
+};
+
+

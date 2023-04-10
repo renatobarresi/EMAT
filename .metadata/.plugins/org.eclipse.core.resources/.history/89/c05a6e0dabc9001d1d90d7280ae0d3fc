@@ -1,0 +1,34 @@
+/*
+ * serialPort_module.h
+ *
+ *  Created on: Mar 22, 2023
+ *      Author: renatobarresi
+ *
+ * TODO:
+ * 	-Improve the class abstraction by making the DMA more global to other possible DMAs in the target microcontroller
+ */
+
+#pragma once
+#ifdef __cplusplus
+
+#include <cstdint>
+#include <string>
+#include "stm32f4xx_hal.h"
+
+class serialPort
+{
+private:
+	bool initUartPeripheral(UART_HandleTypeDef *uartHandler, USART_TypeDef *instance, uint32_t baudrate);
+	void initDMAPeripheral();
+public:
+	USART_TypeDef *instance;
+	UART_HandleTypeDef *uartHandler;
+	uint32_t baudrate;
+
+	serialPort(USART_TypeDef *instance, UART_HandleTypeDef *uartHandler, uint32_t baudrate);
+	bool init();
+	bool write(const std::string &pBuff);
+
+};
+
+#endif
