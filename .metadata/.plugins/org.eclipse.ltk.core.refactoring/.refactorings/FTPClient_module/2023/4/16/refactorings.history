@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;FTPClient_module/Flash_Module.ioc&apos; to &apos;FTPClient_module.ioc&apos;" description="Rename resource &apos;Flash_Module.ioc&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Flash_Module.ioc" name="FTPClient_module.ioc" stamp="1681742004632" updateReferences="true"/>
+</session>

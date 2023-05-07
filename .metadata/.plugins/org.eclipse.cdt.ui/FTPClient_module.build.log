@@ -1,0 +1,10 @@
+14:48:18 **** Incremental Build of configuration Debug for project FTPClient_module ****
+make -j20 all 
+arm-none-eabi-size   FTPClient_module.elf 
+   text	   data	    bss	    dec	    hex	filename
+  11652	     28	  17268	  28948	   7114	FTPClient_module.elf
+Finished building: default.size.stdout
+ 
+
+14:48:18 Build Finished. 0 errors, 0 warnings. (took 125ms)
+

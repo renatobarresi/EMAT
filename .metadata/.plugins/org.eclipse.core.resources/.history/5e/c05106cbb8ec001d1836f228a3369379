@@ -1,0 +1,28 @@
+/*
+ * rtos_module.cpp
+ *
+ *  Created on: May 7, 2023
+ *      Author: renatobarresi
+ */
+
+#pragma once
+
+#include "FreeRTOS.h"
+#include "task.h"
+
+#ifdef __cplusplus
+class rtosTask
+{
+public:
+	rtosTask(const char *taskName, void (*taskFunction)(void *),
+			uint16_t stackSize = configMINIMAL_STACK_SIZE,
+			UBaseType_t priority = tskIDLE_PRIORITY,
+			void *parameters = nullptr);
+private:
+
+};
+
+#endif
+
+
+

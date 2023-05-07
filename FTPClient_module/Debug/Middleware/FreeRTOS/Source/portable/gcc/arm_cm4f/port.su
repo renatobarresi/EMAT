@@ -1,0 +1,13 @@
+../Middleware/FreeRTOS/Source/portable/gcc/arm_cm4f/port.c:192:15:pxPortInitialiseStack	24	static
+../Middleware/FreeRTOS/Source/portable/gcc/arm_cm4f/port.c:224:13:prvTaskExitError	24	static,ignoring_inline_asm
+../Middleware/FreeRTOS/Source/portable/gcc/arm_cm4f/port.c:250:6:SVC_Handler	0	static,ignoring_inline_asm
+../Middleware/FreeRTOS/Source/portable/gcc/arm_cm4f/port.c:269:13:prvPortStartFirstTask	0	static,ignoring_inline_asm
+../Middleware/FreeRTOS/Source/portable/gcc/arm_cm4f/port.c:296:12:xPortStartScheduler	32	static,ignoring_inline_asm
+../Middleware/FreeRTOS/Source/portable/gcc/arm_cm4f/port.c:405:6:vPortEndScheduler	16	static,ignoring_inline_asm
+../Middleware/FreeRTOS/Source/portable/gcc/arm_cm4f/port.c:413:6:vPortEnterCritical	16	static,ignoring_inline_asm
+../Middleware/FreeRTOS/Source/portable/gcc/arm_cm4f/port.c:430:6:vPortExitCritical	16	static,ignoring_inline_asm
+../Middleware/FreeRTOS/Source/portable/gcc/arm_cm4f/port.c:442:6:PendSV_Handler	0	static,ignoring_inline_asm
+../Middleware/FreeRTOS/Source/portable/gcc/arm_cm4f/port.c:499:6:xPortSysTickHandler	16	static,ignoring_inline_asm
+../Middleware/FreeRTOS/Source/portable/gcc/arm_cm4f/port.c:744:32:vPortSetupTimerInterrupt	4	static
+../Middleware/FreeRTOS/Source/portable/gcc/arm_cm4f/port.c:766:13:vPortEnableVFP	0	static,ignoring_inline_asm
+../Middleware/FreeRTOS/Source/portable/gcc/arm_cm4f/port.c:783:10:vPortValidateInterruptPriority	24	static,ignoring_inline_asm

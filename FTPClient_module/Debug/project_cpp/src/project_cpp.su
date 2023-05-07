@@ -1,0 +1,3 @@
+../project_cpp/src/project_cpp.cpp:13:6:void MyTaskFunction1(void*)	16	static
+../project_cpp/src/project_cpp.cpp:21:6:void MyTaskFunction2(void*)	16	static
+../project_cpp/src/project_cpp.cpp:30:6:void main_cpp()	56	static

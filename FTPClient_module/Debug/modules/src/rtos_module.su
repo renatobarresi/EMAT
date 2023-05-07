@@ -1,0 +1,1 @@
+../modules/src/rtos_module.cpp:11:1:rtosTask::rtosTask(const char*, void (*)(void*), uint16_t, UBaseType_t, void*)	48	static

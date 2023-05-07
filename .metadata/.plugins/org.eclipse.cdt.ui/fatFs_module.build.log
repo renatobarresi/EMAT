@@ -1,0 +1,49 @@
+19:36:51 **** Incremental Build of configuration Debug for project fatFs_module ****
+make -j20 all 
+arm-none-eabi-g++ "../project_cpp/src/project_cpp.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I"/home/renatobarresi/Renato/CESE_fiuba/Tesis/Code/fatFs_module/modules/inc" -I"/home/renatobarresi/Renato/CESE_fiuba/Tesis/Code/fatFs_module/Middleware/FatFS/inc" -I"/home/renatobarresi/Renato/CESE_fiuba/Tesis/Code/fatFs_module/project_cpp/inc" -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"project_cpp/src/project_cpp.d" -MT"project_cpp/src/project_cpp.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "project_cpp/src/project_cpp.o"
+arm-none-eabi-g++ "../Middleware/FatFS/src/W25Q64_wrapper.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I"/home/renatobarresi/Renato/CESE_fiuba/Tesis/Code/fatFs_module/modules/inc" -I"/home/renatobarresi/Renato/CESE_fiuba/Tesis/Code/fatFs_module/Middleware/FatFS/inc" -I"/home/renatobarresi/Renato/CESE_fiuba/Tesis/Code/fatFs_module/project_cpp/inc" -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"Middleware/FatFS/src/W25Q64_wrapper.d" -MT"Middleware/FatFS/src/W25Q64_wrapper.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Middleware/FatFS/src/W25Q64_wrapper.o"
+arm-none-eabi-gcc "../Middleware/FatFS/src/diskio.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I"/home/renatobarresi/Renato/CESE_fiuba/Tesis/Code/fatFs_module/Middleware/FatFS/inc" -I"/home/renatobarresi/Renato/CESE_fiuba/Tesis/Code/fatFs_module/modules/inc" -I"/home/renatobarresi/Renato/CESE_fiuba/Tesis/Code/fatFs_module/project_cpp/inc" -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Middleware/FatFS/src/diskio.d" -MT"Middleware/FatFS/src/diskio.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Middleware/FatFS/src/diskio.o"
+arm-none-eabi-gcc "../Middleware/FatFS/src/ff.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I"/home/renatobarresi/Renato/CESE_fiuba/Tesis/Code/fatFs_module/Middleware/FatFS/inc" -I"/home/renatobarresi/Renato/CESE_fiuba/Tesis/Code/fatFs_module/modules/inc" -I"/home/renatobarresi/Renato/CESE_fiuba/Tesis/Code/fatFs_module/project_cpp/inc" -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Middleware/FatFS/src/ff.d" -MT"Middleware/FatFS/src/ff.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Middleware/FatFS/src/ff.o"
+arm-none-eabi-gcc "../Middleware/FatFS/src/ffsystem.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I"/home/renatobarresi/Renato/CESE_fiuba/Tesis/Code/fatFs_module/Middleware/FatFS/inc" -I"/home/renatobarresi/Renato/CESE_fiuba/Tesis/Code/fatFs_module/modules/inc" -I"/home/renatobarresi/Renato/CESE_fiuba/Tesis/Code/fatFs_module/project_cpp/inc" -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Middleware/FatFS/src/ffsystem.d" -MT"Middleware/FatFS/src/ffsystem.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Middleware/FatFS/src/ffsystem.o"
+arm-none-eabi-gcc "../Middleware/FatFS/src/ffunicode.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I"/home/renatobarresi/Renato/CESE_fiuba/Tesis/Code/fatFs_module/Middleware/FatFS/inc" -I"/home/renatobarresi/Renato/CESE_fiuba/Tesis/Code/fatFs_module/modules/inc" -I"/home/renatobarresi/Renato/CESE_fiuba/Tesis/Code/fatFs_module/project_cpp/inc" -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Middleware/FatFS/src/ffunicode.d" -MT"Middleware/FatFS/src/ffunicode.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Middleware/FatFS/src/ffunicode.o"
+../Middleware/FatFS/src/diskio.c: In function 'disk_status':
+../Middleware/FatFS/src/diskio.c:32:10: warning: implicit declaration of function 'W25Q64DiskStatus' [-Wimplicit-function-declaration]
+   32 |   stat = W25Q64DiskStatus();
+      |          ^~~~~~~~~~~~~~~~
+../Middleware/FatFS/src/diskio.c: In function 'disk_initialize':
+../Middleware/FatFS/src/diskio.c:57:10: warning: implicit declaration of function 'W25Q64Init' [-Wimplicit-function-declaration]
+   57 |   stat = W25Q64Init();
+      |          ^~~~~~~~~~
+../Middleware/FatFS/src/diskio.c: In function 'disk_read':
+../Middleware/FatFS/src/diskio.c:85:9: warning: implicit declaration of function 'W25Q64Read' [-Wimplicit-function-declaration]
+   85 |   res = W25Q64Read(buff, sector, count);
+      |         ^~~~~~~~~~
+../Middleware/FatFS/src/diskio.c: In function 'disk_write':
+../Middleware/FatFS/src/diskio.c:117:9: warning: implicit declaration of function 'W25Q64Write' [-Wimplicit-function-declaration]
+  117 |   res = W25Q64Write(buff, sector, count);
+      |         ^~~~~~~~~~~
+../Middleware/FatFS/src/diskio.c: In function 'disk_ioctl':
+../Middleware/FatFS/src/diskio.c:150:9: warning: implicit declaration of function 'W25Q64DiskIoctl' [-Wimplicit-function-declaration]
+  150 |   res = W25Q64DiskIoctl(cmd, buff);
+      |         ^~~~~~~~~~~~~~~
+../Middleware/FatFS/src/diskio.c:144:6: warning: unused variable 'result' [-Wunused-variable]
+  144 |  int result;
+      |      ^~~~~~
+../project_cpp/src/project_cpp.cpp: In function 'void main_cpp()':
+../project_cpp/src/project_cpp.cpp:25:13: warning: variable 'fr' set but not used [-Wunused-but-set-variable]
+   25 |     FRESULT fr;
+      |             ^~
+arm-none-eabi-g++ -o "fatFs_module.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/renatobarresi/Renato/CESE_fiuba/Tesis/Code/fatFs_module/STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="fatFs_module.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: fatFs_module.elf
+ 
+arm-none-eabi-size   fatFs_module.elf 
+arm-none-eabi-objdump -h -S  fatFs_module.elf  > "fatFs_module.list"
+   text	   data	    bss	    dec	    hex	filename
+  15020	     24	   5980	  21024	   5220	fatFs_module.elf
+Finished building: default.size.stdout
+ 
+Finished building: fatFs_module.list
+ 
+
+19:36:52 Build Finished. 0 errors, 7 warnings. (took 952ms)
+

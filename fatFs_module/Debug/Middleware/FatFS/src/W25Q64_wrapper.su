@@ -1,0 +1,9 @@
+../Middleware/FatFS/src/W25Q64_wrapper.cpp:16:10:DSTATUS W25Q64Init()	8	static
+../Middleware/FatFS/src/W25Q64_wrapper.cpp:25:10:DSTATUS W25Q64Read(BYTE*, LBA_t, UINT)	32	static
+../Middleware/FatFS/src/W25Q64_wrapper.cpp:33:10:DSTATUS W25Q64Write(const BYTE*, LBA_t, UINT)	48	static
+../Middleware/FatFS/src/W25Q64_wrapper.cpp:69:10:DSTATUS W25Q64EraseBlock(uint32_t)	16	static
+../Middleware/FatFS/src/W25Q64_wrapper.cpp:75:10:DSTATUS W25Q64EraseSector(uint32_t)	16	static
+../Middleware/FatFS/src/W25Q64_wrapper.cpp:81:10:DRESULT W25Q64DiskIoctl(BYTE, void*)	16	static
+../Middleware/FatFS/src/W25Q64_wrapper.cpp:109:10:DSTATUS W25Q64DiskStatus()	4	static
+../Middleware/FatFS/src/W25Q64_wrapper.cpp:121:1:void __static_initialization_and_destruction_0(int, int)	16	static
+../Middleware/FatFS/src/W25Q64_wrapper.cpp:121:1:cpp)	8	static

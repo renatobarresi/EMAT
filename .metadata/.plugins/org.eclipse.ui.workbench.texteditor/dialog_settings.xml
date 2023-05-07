@@ -8,6 +8,13 @@
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
+			<item value="_USE_ERASE"/>
+			<item value="_MAX_SS"/>
+			<item value="FF_USE_MKFS"/>
+			<item value="f_mkfs"/>
+			<item value="f_fdisk"/>
+			<item value="_FS_NORTC"/>
+			<item value="MMC"/>
 			<item value="RTC"/>
 			<item value="USART3"/>
 			<item value="UART3"/>
