@@ -1,0 +1,34 @@
+/*
+ * filesystem.cpp
+ *
+ *  Created on: May 19, 2023
+ *      Author: renatobarresi
+ */
+
+#include "filesystem.h"
+
+/* Constructor */
+fileSystem::fileSystem()
+{
+
+}
+
+/* Public methods */
+static fileSystem::fileSystem& getInstance()
+{
+	static fileSystem instance;
+	return instance;
+}
+
+uint8_t fileSystem::open()
+{
+	return 1;
+}
+uint8_t fileSystem::write()
+{
+	return 1;
+}
+uint8_t fileSystem::read()
+{
+	return 1;
+}

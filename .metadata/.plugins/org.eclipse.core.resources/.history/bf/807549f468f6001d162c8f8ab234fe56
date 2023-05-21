@@ -1,0 +1,26 @@
+/*
+ * filesystem.h
+ *
+ *  Created on: May 19, 2023
+ *      Author: renatobarresi
+ */
+
+#pragma once
+#ifdef __cplusplus
+
+#include "littleFSInterface.h"
+#include <cstdint>
+
+class fileSystem
+{
+public:
+	static fileSystem& getInstance();
+private:
+	lfs_t lfs;
+	fileSystem();
+	uint8_t open();
+	uint8_t write();
+	uint8_t read();
+};
+
+#endif

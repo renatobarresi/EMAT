@@ -1,0 +1,47 @@
+/*
+ * filesystem.h
+ *
+ *  Created on: May 19, 2023
+ *      Author: renatobarresi
+ */
+
+#pragma once
+#ifdef __cplusplus
+
+#include "littleFSInterface.h"
+#include <cstdint>
+
+enum class fileSystemState
+{
+    Uninitialized,
+    Initialized
+};
+
+enum class fileSystemReturnType
+{
+    errorOpeningFile,
+    errorWritingFile,
+	errorReadingFile,
+	errorClosingFile,
+	noError
+};
+
+
+class fileSystem
+{
+public:
+
+	static fileSystem& getInstance();
+	fileSystemReturnType write(const char *fileName, const char *data);
+	fileSystemReturnType read(const char *fileName, char *buffer, size_t sizeToRead);
+	fileSystemReturnType erase(const char* fileName);
+	lfs_soff_t calculateUsedSpace();
+	lfs_soff_t calculateFreeSpace();
+private:
+	lfs_t lfs;
+	fileSystemState state;
+
+	fileSystem();
+};
+
+#endif

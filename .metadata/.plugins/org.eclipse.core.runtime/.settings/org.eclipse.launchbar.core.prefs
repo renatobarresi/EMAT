@@ -1,10 +1,14 @@
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/arch=x86_64
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/name=Local
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/os=linux
-configDescList=org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:Flash_Module Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:Trabajo_practico_pdM,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:RTC_Module Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:HMI_Module Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:fatFs_module,org.eclipse.launchbar.core.descriptorType.default\:FTPClient_module Debug
+configDescList=org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:FTPClient_module Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:Flash_Module Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:HMI_Module Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:RTC_Module Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:Trabajo_practico_pdM,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:fatFs_module,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:Flash_Module Debug (1),org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:EMAT Debug
 eclipse.preferences.version=1
 org.eclipse.cdt.debug.core.coreBuildDescriptorType\:HMI_module_test/activeLaunchMode=run
 org.eclipse.cdt.debug.core.coreBuildDescriptorType\:HMI_module_test/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:Local
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:EMAT\ Debug/activeLaunchMode=debug
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:EMAT\ Debug/activeLaunchTarget=null\:---
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:FTPClient_module\ Debug/activeLaunchMode=run
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:FTPClient_module\ Debug/activeLaunchTarget=null\:---
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:Flash_Module\ Debug/activeLaunchMode=debug
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:Flash_Module\ Debug/activeLaunchTarget=null\:---
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:HMI_Module\ Debug/activeLaunchMode=debug

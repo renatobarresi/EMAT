@@ -1,4 +1,4 @@
-22:08:47 **** Incremental Build of configuration Debug for project HMI_Module ****
+13:43:40 **** Incremental Build of configuration Debug for project HMI_Module ****
 make -j20 all 
 arm-none-eabi-g++ "../serialPort_module/src/serialPort_module.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I"/home/renatobarresi/Renato/CESE_fiuba/Tesis/Code/HMI_Module/serialPort_module/inc" -I"/home/renatobarresi/Renato/CESE_fiuba/Tesis/Code/HMI_Module/project_cpp/inc" -I"/home/renatobarresi/Renato/CESE_fiuba/Tesis/Code/HMI_Module/hmi_module/inc" -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I.././inc/ -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"serialPort_module/src/serialPort_module.d" -MT"serialPort_module/src/serialPort_module.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "serialPort_module/src/serialPort_module.o"
 arm-none-eabi-g++ -o "HMI_Module.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/renatobarresi/Renato/CESE_fiuba/Tesis/Code/HMI_Module/STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="HMI_Module.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
@@ -7,11 +7,11 @@ Finished building target: HMI_Module.elf
 arm-none-eabi-size   HMI_Module.elf 
 arm-none-eabi-objdump -h -S  HMI_Module.elf  > "HMI_Module.list"
    text	   data	    bss	    dec	    hex	filename
-  30504	    176	   4680	  35360	   8a20	HMI_Module.elf
+  30492	    176	   4680	  35348	   8a14	HMI_Module.elf
 Finished building: default.size.stdout
  
 Finished building: HMI_Module.list
  
 
-22:08:48 Build Finished. 0 errors, 0 warnings. (took 1s.202ms)
+13:43:40 Build Finished. 0 errors, 0 warnings. (took 478ms)
 

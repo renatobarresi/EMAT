@@ -1,0 +1,3 @@
+../project_cpp/src/taskCreator.cpp:38:6:void createTasks()	4	static
+../project_cpp/src/taskCreator.cpp:41:1:void __static_initialization_and_destruction_0(int, int)	24	static
+../project_cpp/src/taskCreator.cpp:41:1:cpp)	8	static

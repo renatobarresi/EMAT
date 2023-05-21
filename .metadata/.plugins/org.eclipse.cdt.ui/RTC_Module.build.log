@@ -1,10 +1,17 @@
-16:18:22 **** Incremental Build of configuration Debug for project RTC_Module ****
+13:29:23 **** Incremental Build of configuration Debug for project RTC_Module ****
 make -j20 all 
+arm-none-eabi-g++ "../rtc_module/src/rtc_module.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I"/home/renatobarresi/Renato/CESE_fiuba/Tesis/Code/RTC_Module/project_cpp/inc" -I"/home/renatobarresi/Renato/CESE_fiuba/Tesis/Code/RTC_Module/rtc_module/inc" -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"rtc_module/src/rtc_module.d" -MT"rtc_module/src/rtc_module.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "rtc_module/src/rtc_module.o"
+arm-none-eabi-g++ -o "RTC_Module.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/renatobarresi/Renato/CESE_fiuba/Tesis/Code/RTC_Module/STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RTC_Module.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: RTC_Module.elf
+ 
 arm-none-eabi-size   RTC_Module.elf 
+arm-none-eabi-objdump -h -S  RTC_Module.elf  > "RTC_Module.list"
    text	   data	    bss	    dec	    hex	filename
- 167280	    752	   6044	 174076	  2a7fc	RTC_Module.elf
+ 167272	    752	   6044	 174068	  2a7f4	RTC_Module.elf
 Finished building: default.size.stdout
  
+Finished building: RTC_Module.list
+ 
 
-16:18:22 Build Finished. 0 errors, 0 warnings. (took 369ms)
+13:29:24 Build Finished. 0 errors, 0 warnings. (took 625ms)
 

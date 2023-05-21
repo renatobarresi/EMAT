@@ -1,0 +1,93 @@
+/*
+ * filesystem.cpp
+ *
+ *  Created on: May 19, 2023
+ *      Author: renatobarresi
+ */
+
+#include "filesystem.h"
+#include "error.h"
+#include <string>
+
+/* Constructor */
+fileSystem::fileSystem()
+{
+	flash_init();
+	int res = lfs_mount(&lfs, &cfg);
+    if (res < 0)
+    {
+        // If the mount fails, try formatting the filesystem
+        res = lfs_format(&lfs, &cfg);
+        if (res < 0)
+        {
+        	errorHandler(__FILE__, __LINE__, ERROR_FATAL, "unable to format filesystem");
+        }
+
+        // Try mounting again
+        res = lfs_mount(&lfs, &cfg);
+        if (res < 0)
+        {
+        	errorHandler(__FILE__, __LINE__, ERROR_FATAL, "unable to mount filesystem");
+        }
+    }
+}
+
+/* Public methods */
+fileSystem& fileSystem::getInstance()
+{
+	static fileSystem instance;
+	return instance;
+}
+
+
+fileSystemReturnType fileSystem::write(const char *fileName, const char *data)
+{
+
+    if (fileName == nullptr || data == nullptr)
+    {
+        // you may want to define specific error codes
+    	errorHandler(__FILE__, __LINE__, ERROR_FATAL, "NULL POINTER");
+    }
+
+
+	int res;
+	lfs_file_t file;
+
+	res = lfs_file_open(&lfs, &file, fileName, LFS_O_WRONLY | LFS_O_CREAT);
+
+	if (res < 0)
+	{
+		return fileSystemReturnType::errorOpeningFile;
+	}
+
+	res = lfs_file_write(&lfs, &file, data, strlen(data));
+
+    res = lfs_file_close(&lfs, &file);
+
+	return fileSystemReturnType::noError;
+}
+fileSystemReturnType fileSystem::read(const char *fileName, char *buffer, size_t sizeToRead)
+{
+    if (fileName == nullptr || buffer == nullptr)
+    {
+        // you may want to define specific error codes
+    	errorHandler(__FILE__, __LINE__, ERROR_FATAL, "NULL POINTER");
+    }
+
+
+	int res;
+	lfs_file_t file;
+
+	res = lfs_file_open(&lfs, &file, fileName, LFS_O_RDONLY);
+
+	if (res < 0)
+	{
+		return fileSystemReturnType::errorOpeningFile;
+	}
+
+	res = lfs_file_read(&lfs, &file, buffer, sizeToRead);
+
+	res = lfs_file_close(&lfs, &file);
+
+	return fileSystemReturnType::noError;
+}

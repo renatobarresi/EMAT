@@ -1,0 +1,75 @@
+#pragma once
+#ifdef __cplusplus
+
+#include <cstdint>
+#include "FreeRTOS.h"
+#include "task.h"
+#include "error.h"
+
+// Define your own types
+using TaskPriority = UBaseType_t;
+using TaskStackDepth = uint16_t;
+using QueueLength = UBaseType_t;
+using QueueItemSize = UBaseType_t;
+
+class rtosTask
+{
+public:
+	/* Constructor */
+	rtosTask(const char *taskName,
+			void (*taskFunction)(void *),
+			uint16_t stackSize,
+			UBaseType_t priority,
+			void *parameters);
+	void create();
+	void suspend();
+	void resume();
+	void delay(const TickType_t xTicksToDelay);
+
+private:
+    TaskHandle_t m_handle;
+    const char *m_name;
+    void (*m_taskFunction)(void *);
+    void *m_parameters;
+    uint16_t m_stackSize;
+    UBaseType_t m_priority;
+};
+
+class RTOSMutex
+{
+public:
+    RTOSMutex() : mutexHandle(xSemaphoreCreateMutex()) {}
+
+    void take() {
+        xSemaphoreTake(mutexHandle, portMAX_DELAY);
+    }
+
+    void give() {
+        xSemaphoreGive(mutexHandle);
+    }
+
+private:
+    SemaphoreHandle_t mutexHandle;
+};
+
+class RTOSQueue
+{
+public:
+    RTOSQueue(UBaseType_t length, UBaseType_t itemSize) : queueHandle(xQueueCreate(length, itemSize)) {}
+
+    void enqueue(const void* item) {
+        xQueueSend(queueHandle, item, portMAX_DELAY);
+    }
+
+    void dequeue(void* item) {
+        xQueueReceive(queueHandle, item, portMAX_DELAY);
+    }
+
+private:
+    QueueHandle_t queueHandle;
+};
+
+#endif
+
+
+

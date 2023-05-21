@@ -1,21 +1,16 @@
-14:48:15 **** Incremental Build of configuration Debug for project FTPClient_module ****
+14:40:09 **** Incremental Build of configuration Debug for project EMAT ****
 make -j20 all 
-arm-none-eabi-g++ "../project_cpp/src/project_cpp.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I"/home/renatobarresi/Renato/CESE_fiuba/Tesis/Code/FTPClient_module/Middleware/FreeRTOS/Source/include" -I"/home/renatobarresi/Renato/CESE_fiuba/Tesis/Code/FTPClient_module/Middleware/FreeRTOS/Source/portable/gcc/arm_cm4f" -I../Core/Inc -I"/home/renatobarresi/Renato/CESE_fiuba/Tesis/Code/FTPClient_module/modules/inc" -I"/home/renatobarresi/Renato/CESE_fiuba/Tesis/Code/FTPClient_module/project_cpp/inc" -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"project_cpp/src/project_cpp.d" -MT"project_cpp/src/project_cpp.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "project_cpp/src/project_cpp.o"
-arm-none-eabi-g++ -o "FTPClient_module.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/renatobarresi/Renato/CESE_fiuba/Tesis/Code/FTPClient_module/STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="FTPClient_module.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
-Finished building target: FTPClient_module.elf
+arm-none-eabi-g++ "../project_cpp/src/applicationManager.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I"/home/renatobarresi/Renato/CESE_fiuba/Tesis/Code/emat/middleware/littleFS/inc" -I"/home/renatobarresi/Renato/CESE_fiuba/Tesis/Code/emat/middleware/FreeRTOS/Source/include" -I"/home/renatobarresi/Renato/CESE_fiuba/Tesis/Code/emat/middleware/FreeRTOS/Source/portable/gcc/arm_cm4f" -I"/home/renatobarresi/Renato/CESE_fiuba/Tesis/Code/emat/project_cpp/inc" -I"/home/renatobarresi/Renato/CESE_fiuba/Tesis/Code/emat/modules/inc" -I"/home/renatobarresi/Renato/CESE_fiuba/Tesis/Code/emat/middleware" -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"project_cpp/src/applicationManager.d" -MT"project_cpp/src/applicationManager.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "project_cpp/src/applicationManager.o"
+arm-none-eabi-g++ "../project_cpp/src/commandManager.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I"/home/renatobarresi/Renato/CESE_fiuba/Tesis/Code/emat/middleware/littleFS/inc" -I"/home/renatobarresi/Renato/CESE_fiuba/Tesis/Code/emat/middleware/FreeRTOS/Source/include" -I"/home/renatobarresi/Renato/CESE_fiuba/Tesis/Code/emat/middleware/FreeRTOS/Source/portable/gcc/arm_cm4f" -I"/home/renatobarresi/Renato/CESE_fiuba/Tesis/Code/emat/project_cpp/inc" -I"/home/renatobarresi/Renato/CESE_fiuba/Tesis/Code/emat/modules/inc" -I"/home/renatobarresi/Renato/CESE_fiuba/Tesis/Code/emat/middleware" -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"project_cpp/src/commandManager.d" -MT"project_cpp/src/commandManager.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "project_cpp/src/commandManager.o"
+arm-none-eabi-g++ "../project_cpp/src/taskCreator.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I"/home/renatobarresi/Renato/CESE_fiuba/Tesis/Code/emat/middleware/littleFS/inc" -I"/home/renatobarresi/Renato/CESE_fiuba/Tesis/Code/emat/middleware/FreeRTOS/Source/include" -I"/home/renatobarresi/Renato/CESE_fiuba/Tesis/Code/emat/middleware/FreeRTOS/Source/portable/gcc/arm_cm4f" -I"/home/renatobarresi/Renato/CESE_fiuba/Tesis/Code/emat/project_cpp/inc" -I"/home/renatobarresi/Renato/CESE_fiuba/Tesis/Code/emat/modules/inc" -I"/home/renatobarresi/Renato/CESE_fiuba/Tesis/Code/emat/middleware" -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"project_cpp/src/taskCreator.d" -MT"project_cpp/src/taskCreator.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "project_cpp/src/taskCreator.o"
+arm-none-eabi-g++ -o "EMAT.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/renatobarresi/Renato/CESE_fiuba/Tesis/Code/emat/STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="EMAT.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: EMAT.elf
  
-arm-none-eabi-size   FTPClient_module.elf 
-arm-none-eabi-objdump -h -S  FTPClient_module.elf  > "FTPClient_module.list"
+arm-none-eabi-size   EMAT.elf 
+arm-none-eabi-objdump -h -S  EMAT.elf  > "EMAT.list"
    text	   data	    bss	    dec	    hex	filename
-  11652	     28	  17268	  28948	   7114	FTPClient_module.elf
+  54612	    180	   2264	  57056	   dee0	EMAT.elf
 Finished building: default.size.stdout
  
-Finished building: FTPClient_module.list
- 
-14:48:18 **** Incremental Build of configuration Debug for project FTPClient_module ****
-make -j20 all 
-arm-none-eabi-size   FTPClient_module.elf 
-   text	   data	    bss	    dec	    hex	filename
-  11652	     28	  17268	  28948	   7114	FTPClient_module.elf
-Finished building: default.size.stdout
+Finished building: EMAT.list
  

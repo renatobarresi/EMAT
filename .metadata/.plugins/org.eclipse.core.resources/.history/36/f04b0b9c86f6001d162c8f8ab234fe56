@@ -1,0 +1,71 @@
+/*
+ * filesystem.cpp
+ *
+ *  Created on: May 19, 2023
+ *      Author: renatobarresi
+ */
+
+#include "filesystem.h"
+#include "error.h"
+#include <string>
+
+/* Constructor */
+fileSystem::fileSystem()
+{
+	flash_init();
+	int res = lfs_mount(&lfs, &cfg);
+    if (res < 0)
+    {
+        // If the mount fails, try formatting the filesystem
+        res = lfs_format(&lfs, &cfg);
+        if (res < 0)
+        {
+        	errorHandler(__FILE__, __LINE__, ERROR_FATAL, "unable to format filesystem");
+        }
+
+        // Try mounting again
+        res = lfs_mount(&lfs, &cfg);
+        if (res < 0)
+        {
+        	errorHandler(__FILE__, __LINE__, ERROR_FATAL, "unable to mount filesystem");
+        }
+    }
+}
+
+/* Public methods */
+fileSystem& fileSystem::getInstance()
+{
+	static fileSystem instance;
+	return instance;
+}
+
+int fileSystem::open(const char *fileName, char mode)
+{
+
+	return 1;
+}
+
+int fileSystem::write(const char *fileName, const char *data);
+{
+
+	int res;
+	lfs_file_t file;
+
+	res = lfs_file_open(&lfs, &file, fileName, LFS_O_WRONLY | LFS_O_CREAT);
+
+	if (res < 0)
+	{
+		return 0;
+	}
+
+	res = lfs_file_write(&lfs, &file, data, strlen(data));
+
+    // Close the file after reading
+    res = lfs_file_close(&lfs, &file);
+
+	return res;
+}
+int fileSystem::read()
+{
+	return 1;
+}
