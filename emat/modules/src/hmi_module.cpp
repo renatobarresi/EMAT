@@ -103,7 +103,7 @@ void humanMachineInterface::printCommands()
  */
 uint8_t serialAvailable()
 {
-
+	return 1;
 }
 
 

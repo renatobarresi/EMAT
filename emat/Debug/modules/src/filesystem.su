@@ -1,8 +1,9 @@
 /opt/st/stm32cubeide_1.10.1/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.10.3-2021.10.linux64_1.0.0.202111181127/tools/arm-none-eabi/include/c++/10.3.1/arm-none-eabi/thumb/v7e-m+fp/hard/bits/gthr-default.h:229:1:int __gthread_key_delete(__gthread_key_t)	16	static
 ../modules/src/filesystem.cpp:19:1:fileSystem::fileSystem()	24	static
-../modules/src/filesystem.cpp:46:13:static fileSystem& fileSystem::getInstance()	8	static
-../modules/src/filesystem.cpp:59:22:fileSystemReturnType fileSystem::write(const char*, const char*)	120	static
-../modules/src/filesystem.cpp:91:22:fileSystemReturnType fileSystem::read(const char*, char*, size_t)	112	static
-../modules/src/filesystem.cpp:121:22:fileSystemReturnType fileSystem::erase(const char*)	24	static
-../modules/src/filesystem.cpp:143:12:lfs_soff_t fileSystem::calculateUsedSpace()	336	static
-../modules/src/filesystem.cpp:166:12:lfs_soff_t fileSystem::calculateFreeSpace()	24	static
+../modules/src/filesystem.cpp:41:6:void fileSystem::switchConfig(FileSystemConfig)	16	static
+../modules/src/filesystem.cpp:58:13:static fileSystem& fileSystem::getInstance()	8	static
+../modules/src/filesystem.cpp:71:22:fileSystemReturnType fileSystem::write(const char*, const char*)	120	static
+../modules/src/filesystem.cpp:103:22:fileSystemReturnType fileSystem::read(const char*, char*, size_t)	112	static
+../modules/src/filesystem.cpp:133:22:fileSystemReturnType fileSystem::erase(const char*)	24	static
+../modules/src/filesystem.cpp:155:12:lfs_soff_t fileSystem::calculateUsedSpace()	336	static
+../modules/src/filesystem.cpp:178:12:lfs_soff_t fileSystem::calculateFreeSpace()	24	static

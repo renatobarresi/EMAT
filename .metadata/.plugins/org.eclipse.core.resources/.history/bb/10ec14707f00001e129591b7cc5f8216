@@ -1,0 +1,91 @@
+/*
+ * SD_module.cpp
+ *
+ *  Created on: May 24, 2023
+ *      Author: renatobarresi
+ */
+
+#include "SD_module.h"
+#include "spi_module.h"
+
+// This is a placeholder for SPI command codes.
+enum SD_Commands {
+    CMD0 = 0,
+    CMD8 = 8,
+    // ... other command codes ...
+};
+
+// Placeholder for SD card types.
+enum SD_CardType {
+    SDSC,
+    SDHC,
+    SDXC
+};
+
+HAL_StatusTypeDef SDCard::init() {
+    SPI& spi = SPI::getInstance();
+
+    spi.csHigh(csPin, csGPIOPort);
+
+    // Perform SD card initialization sequence using SPI commands...
+}
+
+HAL_StatusTypeDef SDCard::readBlock(uint32_t blockNumber, uint8_t* buffer) {
+    SPI& spi = SPI::getInstance();
+
+    spi.csLow(csPin, csGPIOPort);
+
+    // Send command to read a block...
+
+    spi.csHigh(csPin, csGPIOPort);
+}
+
+HAL_StatusTypeDef SDCard::writeBlock(uint32_t blockNumber, const uint8_t* data) {
+    SPI& spi = SPI::getInstance();
+
+    spi.csLow(csPin, csGPIOPort);
+
+    // Send command to write a block...
+
+    spi.csHigh(csPin, csGPIOPort);
+}
+
+HAL_StatusTypeDef SDCard::readMultipleBlocks(uint32_t startBlock, uint32_t numBlocks, uint8_t* buffer) {
+    // Similar to readBlock, but with a loop and handling for multiple blocks.
+}
+
+HAL_StatusTypeDef SDCard::writeMultipleBlocks(uint32_t startBlock, uint32_t numBlocks, const uint8_t* data) {
+    // Similar to writeBlock, but with a loop and handling for multiple blocks.
+}
+
+uint64_t SDCard::getSize() {
+    // Implement code to return the total capacity of the SD card in bytes.
+    // This will depend on specific SD card commands and how they're handled.
+    return 0; // placeholder
+}
+
+uint16_t SDCard::getBlockSize() {
+    // Implement code to return the block size of the SD card in bytes.
+    // This will depend on specific SD card commands and how they're handled.
+    return 0; // placeholder
+}
+
+TypeOfCard SDCard::getCardType() {
+    // Implement code to identify the SD card type and return as a string.
+    // This will depend on specific SD card commands and how they're handled.
+    return TypeOfCard::SDHC; // placeholder
+}
+
+bool SDCard::isReady() {
+    // Implement code to check if the SD card is ready.
+    // This will depend on specific SD card commands and how they're handled.
+    return false; // placeholder
+}
+
+bool SDCard::isWritable() {
+    // Implement code to check if the SD card is writable.
+    // This will depend on specific SD card commands and how they're handled.
+    return false; // placeholder
+}
+
+

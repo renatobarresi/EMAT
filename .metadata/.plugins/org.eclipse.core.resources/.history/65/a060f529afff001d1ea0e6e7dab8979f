@@ -1,0 +1,15 @@
+/*
+ * gpio_module.h
+ *
+ *  Created on: May 31, 2023
+ *      Author: renatobarresi
+ */
+
+#ifndef INC_GPIO_MODULE_H_
+#define INC_GPIO_MODULE_H_
+
+
+
+
+
+#endif /* INC_GPIO_MODULE_H_ */

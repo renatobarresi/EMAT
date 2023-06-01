@@ -33,6 +33,11 @@ enum class fileSystemReturnType
     noError /**< No error occurred. */
 };
 
+enum class FileSystemConfig {
+    W25Q64,
+    SD_CARD,
+};
+
 /**
  * @brief Class representing the file system.
  */
@@ -45,6 +50,8 @@ public:
      * @return A reference to the fileSystem instance.
      */
     static fileSystem& getInstance();
+
+    void switchConfig(FileSystemConfig config);
 
     /**
      * @brief Write data to a file.
@@ -89,6 +96,9 @@ public:
 
 private:
     lfs_t lfs; /**< LittleFS object. */
+    const lfs_config *current_config;
+    //const struct lfs_config cfg;
+
     fileSystemState state; /**< State of the file system. */
 
     /**

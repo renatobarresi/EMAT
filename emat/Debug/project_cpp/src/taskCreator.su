@@ -1,3 +1,4 @@
-../project_cpp/src/taskCreator.cpp:38:6:void createTasks()	4	static
-../project_cpp/src/taskCreator.cpp:41:1:void __static_initialization_and_destruction_0(int, int)	24	static
-../project_cpp/src/taskCreator.cpp:41:1:cpp)	8	static
+../project_cpp/src/taskCreator.cpp:21:6:void visualTask(void*)	16	static
+../project_cpp/src/taskCreator.cpp:56:6:void createTasks()	24	static
+../project_cpp/src/taskCreator.cpp:85:6:void initOS()	8	static
+../project_cpp/src/taskCreator.cpp:90:6:void initVisualLedIndicator()	32	static

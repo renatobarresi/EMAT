@@ -27,7 +27,8 @@ modules/src/W25Qx_module.o: ../modules/src/W25Qx_module.cpp \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h \
- /home/renatobarresi/Renato/CESE_fiuba/Tesis/Code/emat/modules/inc/spi_module.h
+ /home/renatobarresi/Renato/CESE_fiuba/Tesis/Code/emat/modules/inc/spi_module.h \
+ /home/renatobarresi/Renato/CESE_fiuba/Tesis/Code/emat/modules/inc/gpio_module.h
 /home/renatobarresi/Renato/CESE_fiuba/Tesis/Code/emat/modules/inc/W25Qx_module.h:
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:
 ../Core/Inc/stm32f4xx_hal_conf.h:
@@ -57,3 +58,4 @@ modules/src/W25Qx_module.o: ../modules/src/W25Qx_module.cpp \
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h:
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h:
 /home/renatobarresi/Renato/CESE_fiuba/Tesis/Code/emat/modules/inc/spi_module.h:
+/home/renatobarresi/Renato/CESE_fiuba/Tesis/Code/emat/modules/inc/gpio_module.h:

@@ -31,14 +31,17 @@ void RTOSTask::create()
 		errorHandler(__FILE__, __LINE__, ERROR_FATAL, "Unable to create Task\n");
 	}
 }
+
 void RTOSTask::suspend()
 {
 	vTaskSuspend(m_handle);
 }
+
 void RTOSTask::resume()
 {
 	vTaskResume(m_handle);
 }
+
 void RTOSTask::delay(const tickType xTicksToDelay)
 {
 	vTaskDelay(xTicksToDelay);

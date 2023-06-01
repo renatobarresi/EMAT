@@ -1,5 +1,5 @@
 ../modules/src/rtos_module.cpp:11:1:RTOSTask::RTOSTask(const char*, void (*)(void*), TaskStackDepth, TaskPriority, void*)	24	static
 ../modules/src/rtos_module.cpp:24:6:void RTOSTask::create()	40	static
-../modules/src/rtos_module.cpp:34:6:void RTOSTask::suspend()	16	static
-../modules/src/rtos_module.cpp:38:6:void RTOSTask::resume()	16	static
-../modules/src/rtos_module.cpp:42:6:void RTOSTask::delay(tickType)	16	static
+../modules/src/rtos_module.cpp:35:6:void RTOSTask::suspend()	16	static
+../modules/src/rtos_module.cpp:40:6:void RTOSTask::resume()	16	static
+../modules/src/rtos_module.cpp:45:6:void RTOSTask::delay(tickType)	16	static

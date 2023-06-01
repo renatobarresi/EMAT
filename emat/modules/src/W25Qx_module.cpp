@@ -5,6 +5,7 @@
  *      Author: renatobarresi
  */
 #include "W25Qx_module.h"
+#include "gpio_module.h"
 
 /* constexpr */
 constexpr uint8_t CMD_WRITE_ENABLE       = 0x06;
@@ -21,18 +22,28 @@ constexpr uint8_t CMD_READ_JDEC          = 0x9F;
 constexpr uint8_t STATUS_BUSY_MASK = 0x01;
 
 /* Constructor */
-W25Q64::W25Q64(SPI_HandleTypeDef *hspi, GPIO_TypeDef *cs_gpio_port, uint16_t cs_pin)
-	: mySPIPort(hspi, cs_pin, cs_gpio_port)
+W25Q64::W25Q64(GPIO_TypeDef *cs_gpio_port, uint16_t cs_pin)
+    : csGPIOPort(cs_gpio_port), csPin(cs_pin), mySPIPort(SPI::getInstance())
 {
-	this->hspi = hspi;
-	this->csPin = cs_pin;
-	this->csGPIOPort = cs_gpio_port;
+    // Rest of your constructor code
 }
-
 /* Public methods */
 HAL_StatusTypeDef W25Q64::init()
 {
-	return mySPIPort.init();
+
+	HAL_StatusTypeDef status;
+
+	// Init GPIO peripheral
+	initGPIOOutput(this->csPin, this->csGPIOPort);
+
+	// Check if the SPI peripheral has already been initialized
+	if (SPIStates::NotInitialized == mySPIPort.state)
+	{
+		status = mySPIPort.init();
+		return status;
+	}
+
+	return HAL_OK;
 }
 
 void W25Q64::write_enable()
@@ -182,10 +193,10 @@ void W25Q64::wait_until_ready()
 /* Private methods */
 void W25Q64::cs_select()
 {
-	mySPIPort.csLow();
+	mySPIPort.csLow(this->csPin, this->csGPIOPort);
 }
 
 void W25Q64::cs_deselect()
 {
-	mySPIPort.csHigh();
+	mySPIPort.csHigh(this->csPin, this->csGPIOPort);
 }

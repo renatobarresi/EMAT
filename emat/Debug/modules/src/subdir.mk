@@ -5,9 +5,10 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 CPP_SRCS += \
+../modules/src/SD_module.cpp \
 ../modules/src/W25Qx_module.cpp \
-../modules/src/dataAccessObject.cpp \
 ../modules/src/filesystem.cpp \
+../modules/src/gpio_module.cpp \
 ../modules/src/hmi_module.cpp \
 ../modules/src/littleFSInterface.cpp \
 ../modules/src/rtc_module.cpp \
@@ -16,9 +17,10 @@ CPP_SRCS += \
 ../modules/src/spi_module.cpp 
 
 OBJS += \
+./modules/src/SD_module.o \
 ./modules/src/W25Qx_module.o \
-./modules/src/dataAccessObject.o \
 ./modules/src/filesystem.o \
+./modules/src/gpio_module.o \
 ./modules/src/hmi_module.o \
 ./modules/src/littleFSInterface.o \
 ./modules/src/rtc_module.o \
@@ -27,9 +29,10 @@ OBJS += \
 ./modules/src/spi_module.o 
 
 CPP_DEPS += \
+./modules/src/SD_module.d \
 ./modules/src/W25Qx_module.d \
-./modules/src/dataAccessObject.d \
 ./modules/src/filesystem.d \
+./modules/src/gpio_module.d \
 ./modules/src/hmi_module.d \
 ./modules/src/littleFSInterface.d \
 ./modules/src/rtc_module.d \
@@ -45,7 +48,7 @@ modules/src/%.o modules/src/%.su: ../modules/src/%.cpp modules/src/subdir.mk
 clean: clean-modules-2f-src
 
 clean-modules-2f-src:
-	-$(RM) ./modules/src/W25Qx_module.d ./modules/src/W25Qx_module.o ./modules/src/W25Qx_module.su ./modules/src/dataAccessObject.d ./modules/src/dataAccessObject.o ./modules/src/dataAccessObject.su ./modules/src/filesystem.d ./modules/src/filesystem.o ./modules/src/filesystem.su ./modules/src/hmi_module.d ./modules/src/hmi_module.o ./modules/src/hmi_module.su ./modules/src/littleFSInterface.d ./modules/src/littleFSInterface.o ./modules/src/littleFSInterface.su ./modules/src/rtc_module.d ./modules/src/rtc_module.o ./modules/src/rtc_module.su ./modules/src/rtos_module.d ./modules/src/rtos_module.o ./modules/src/rtos_module.su ./modules/src/serialPort_module.d ./modules/src/serialPort_module.o ./modules/src/serialPort_module.su ./modules/src/spi_module.d ./modules/src/spi_module.o ./modules/src/spi_module.su
+	-$(RM) ./modules/src/SD_module.d ./modules/src/SD_module.o ./modules/src/SD_module.su ./modules/src/W25Qx_module.d ./modules/src/W25Qx_module.o ./modules/src/W25Qx_module.su ./modules/src/filesystem.d ./modules/src/filesystem.o ./modules/src/filesystem.su ./modules/src/gpio_module.d ./modules/src/gpio_module.o ./modules/src/gpio_module.su ./modules/src/hmi_module.d ./modules/src/hmi_module.o ./modules/src/hmi_module.su ./modules/src/littleFSInterface.d ./modules/src/littleFSInterface.o ./modules/src/littleFSInterface.su ./modules/src/rtc_module.d ./modules/src/rtc_module.o ./modules/src/rtc_module.su ./modules/src/rtos_module.d ./modules/src/rtos_module.o ./modules/src/rtos_module.su ./modules/src/serialPort_module.d ./modules/src/serialPort_module.o ./modules/src/serialPort_module.su ./modules/src/spi_module.d ./modules/src/spi_module.o ./modules/src/spi_module.su
 
 .PHONY: clean-modules-2f-src
 

@@ -10,6 +10,7 @@
 DMA_HandleTypeDef hdma_spi1_rx;
 DMA_HandleTypeDef hdma_spi1_tx;
 
+SPI_HandleTypeDef SPI_HANDLER;
 
 /**
 * @brief SPI MSP Initialization
@@ -96,30 +97,20 @@ void HAL_SPI_MspInit(SPI_HandleTypeDef* hspi)
 
 }
 
-SPI::SPI(SPI_HandleTypeDef *hspi, uint16_t pin, GPIO_TypeDef *port)
+SPI& SPI::getInstance()
 {
-	this->hspi_ = hspi;
-	this->CSPin = pin;
-	this->CSPort = port;
+	static SPI instance;
+
+	return instance;
 }
+
+// TODO
+// Add modularity
 
 HAL_StatusTypeDef SPI::init()
 {
 
-	// Configure CS GPIO
-	GPIO_InitTypeDef GPIO_InitStruct = {0};
-
-	__HAL_RCC_GPIOF_CLK_ENABLE(); //TODO add modularity
-
-	GPIO_InitStruct.Pin = this->CSPin;
-	GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
-	GPIO_InitStruct.Pull = GPIO_NOPULL;
-	GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
-	HAL_GPIO_Init(this->CSPort, &GPIO_InitStruct);
-
-	HAL_GPIO_WritePin(this->CSPort, this->CSPin, GPIO_PIN_SET);
-
-	this->hspi_->Instance = SPI1; //TODO add modularity
+	this->hspi_->Instance = SPI1;
 	this->hspi_->Init.Mode = SPI_MODE_MASTER;
 	this->hspi_->Init.Direction = SPI_DIRECTION_2LINES;
 	this->hspi_->Init.DataSize = SPI_DATASIZE_8BIT;
@@ -162,12 +153,12 @@ HAL_StatusTypeDef SPI::transmitReceive(uint8_t *pTxData, uint8_t *pRxData, uint1
 	return HAL_SPI_TransmitReceive(this->hspi_, pTxData, pRxData, size, HAL_MAX_DELAY);
 }
 
-void SPI::csHigh()
+void SPI::csHigh(uint16_t pin, GPIO_TypeDef *port)
 {
-	HAL_GPIO_WritePin(this->CSPort, this->CSPin, GPIO_PIN_SET);
+	HAL_GPIO_WritePin(port, pin, GPIO_PIN_SET);
 }
 
-void SPI::csLow()
+void SPI::csLow(uint16_t pin, GPIO_TypeDef *port)
 {
-	HAL_GPIO_WritePin(this->CSPort, this->CSPin, GPIO_PIN_RESET);
+	HAL_GPIO_WritePin(port, pin, GPIO_PIN_RESET);
 }

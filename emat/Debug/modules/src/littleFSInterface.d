@@ -30,7 +30,8 @@ modules/src/littleFSInterface.o: ../modules/src/littleFSInterface.cpp \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h \
- /home/renatobarresi/Renato/CESE_fiuba/Tesis/Code/emat/modules/inc/spi_module.h
+ /home/renatobarresi/Renato/CESE_fiuba/Tesis/Code/emat/modules/inc/spi_module.h \
+ ../Core/Inc/error.h
 /home/renatobarresi/Renato/CESE_fiuba/Tesis/Code/emat/modules/inc/littleFSInterface.h:
 /home/renatobarresi/Renato/CESE_fiuba/Tesis/Code/emat/middleware/littleFS/inc/lfs.h:
 /home/renatobarresi/Renato/CESE_fiuba/Tesis/Code/emat/middleware/littleFS/inc/lfs_util.h:
@@ -63,3 +64,4 @@ modules/src/littleFSInterface.o: ../modules/src/littleFSInterface.cpp \
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h:
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h:
 /home/renatobarresi/Renato/CESE_fiuba/Tesis/Code/emat/modules/inc/spi_module.h:
+../Core/Inc/error.h:

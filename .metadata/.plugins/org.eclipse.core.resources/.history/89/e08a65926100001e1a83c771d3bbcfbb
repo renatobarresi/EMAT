@@ -1,0 +1,52 @@
+/*
+ * SD_module.h
+ *
+ *  Created on: May 24, 2023
+ *      Author: renatobarresi
+ */
+
+#pragma once
+#ifdef __cplusplus
+
+#include "stm32f4xx_hal.h"
+#include "spi_module.h"
+
+/**
+ * @class SDCard
+ * @brief Singleton class for handling SD card operations.
+ *
+ * This class provides an interface for communicating with SD card via SPI.
+ * It's a singleton design pattern to make sure only one instance exists for the SD card throughout the application.
+ */
+class SDCard
+{
+public:
+    /**
+     * @brief Constructs the SDCard class.
+     *
+     * @param hspi         SPI handler.
+     * @param cs_gpio_port GPIO port for the CS (Chip Select) pin.
+     * @param cs_pin       CS pin.
+     */
+    SDCard(GPIO_TypeDef *cs_gpio_port, uint16_t cs_pin);
+
+
+
+private:
+    GPIO_TypeDef *csGPIOPort; ///< GPIO port for the chip select pin.
+    uint16_t csPin; ///< Pin number for the chip select.
+
+    SPI& mySPIPort; ///< SPI port for communication with the flash memory.
+
+    /**
+     * @brief Selects the chip by pulling the chip select pin low.
+     */
+    void cs_select();
+
+    /**
+     * @brief Deselects the chip by pulling the chip select pin high.
+     */
+    void cs_deselect();
+};
+
+#endif

@@ -1,0 +1,32 @@
+/*
+ * SD_module.h
+ *
+ *  Created on: May 24, 2023
+ *      Author: renatobarresi
+ */
+
+#pragma once
+#ifdef __cplusplus
+
+#include "stm32f4xx_hal.h"
+#include "spi_module.h"
+
+class SDcard
+{
+
+public:
+
+	SDCard(SPI_HandleTypeDef *hspi, GPIO_TypeDef *cs_gpio_port, uint16_t cs_pin);
+
+private:
+    SPI_HandleTypeDef *hspi;
+    GPIO_TypeDef *csGPIOPort;
+    uint16_t csPin;
+
+    SPI mySPIPort;
+
+    void cs_select();
+    void cs_deselect();
+};
+
+#endif

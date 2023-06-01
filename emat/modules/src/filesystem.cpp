@@ -19,23 +19,35 @@
 fileSystem::fileSystem()
 {
     flash_init();
-    int res = lfs_mount(&lfs, &cfg);
+    int res = lfs_mount(&lfs, &w25q64_cfg);
     if (res < 0)
     {
         // If the mount fails, try formatting the filesystem
-        res = lfs_format(&lfs, &cfg);
+        res = lfs_format(&lfs, &w25q64_cfg);
         if (res < 0)
         {
             errorHandler(__FILE__, __LINE__, ERROR_FATAL, "unable to format filesystem");
         }
 
         // Try mounting again
-        res = lfs_mount(&lfs, &cfg);
+        res = lfs_mount(&lfs, &w25q64_cfg);
         if (res < 0)
         {
             errorHandler(__FILE__, __LINE__, ERROR_FATAL, "unable to mount filesystem");
         }
     }
+}
+
+void fileSystem::switchConfig(FileSystemConfig config)
+{
+ if (FileSystemConfig::SD_CARD == config)
+ {
+	 current_config = &sd_cfg;
+ }
+ else if (FileSystemConfig::W25Q64 == config)
+ {
+	 current_config = &w25q64_cfg;
+ }
 }
 
 /**
@@ -165,7 +177,7 @@ lfs_soff_t fileSystem::calculateUsedSpace()
  */
 lfs_soff_t fileSystem::calculateFreeSpace()
 {
-    lfs_soff_t totalSpace = cfg.block_count * cfg.block_size; // total space
+    lfs_soff_t totalSpace = w25q64_cfg.block_count * w25q64_cfg.block_size; // total space
     lfs_soff_t usedSpace = calculateUsedSpace();
 
     return totalSpace - usedSpace;

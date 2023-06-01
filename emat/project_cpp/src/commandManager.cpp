@@ -6,12 +6,13 @@
  */
 
 #include "commandManager.h"
+#include "rtos_module.h"
 
 void commandManager(void *pvParams)
 {
 	while (1)
 	{
-
+		vTaskDelay(pdMS_TO_TICKS(1000));
 	}
 }
 

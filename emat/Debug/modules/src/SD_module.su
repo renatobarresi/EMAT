@@ -1,0 +1,14 @@
+../modules/src/SD_module.cpp:82:1:SDCard::SDCard(GPIO_TypeDef*, uint16_t)	24	static
+../modules/src/SD_module.cpp:94:6:void SDCard::commandGenerator(uint8_t, uint32_t, uint8_t*)	24	static
+../modules/src/SD_module.cpp:113:19:HAL_StatusTypeDef SDCard::init()	32	static
+../modules/src/SD_module.cpp:174:19:HAL_StatusTypeDef SDCard::readBlock(uint32_t, uint8_t*)	32	static
+../modules/src/SD_module.cpp:184:19:HAL_StatusTypeDef SDCard::writeBlock(uint32_t, const uint8_t*)	32	static
+../modules/src/SD_module.cpp:194:19:HAL_StatusTypeDef SDCard::readMultipleBlocks(uint32_t, uint32_t, uint8_t*)	24	static
+../modules/src/SD_module.cpp:198:19:HAL_StatusTypeDef SDCard::writeMultipleBlocks(uint32_t, uint32_t, const uint8_t*)	24	static
+../modules/src/SD_module.cpp:202:10:uint64_t SDCard::getSize()	16	static
+../modules/src/SD_module.cpp:208:10:uint16_t SDCard::getBlockSize()	16	static
+../modules/src/SD_module.cpp:214:12:TypeOfCard SDCard::getCardType()	16	static
+../modules/src/SD_module.cpp:220:6:bool SDCard::isReady()	16	static
+../modules/src/SD_module.cpp:226:6:bool SDCard::isWritable()	16	static
+../modules/src/SD_module.cpp:232:6:void SDCard::cs_select()	16	static
+../modules/src/SD_module.cpp:237:6:void SDCard::cs_deselect()	16	static

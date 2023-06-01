@@ -1,15 +1,29 @@
-14:40:09 **** Incremental Build of configuration Debug for project EMAT ****
+16:52:19 **** Incremental Build of configuration Debug for project EMAT ****
 make -j20 all 
-arm-none-eabi-g++ "../project_cpp/src/applicationManager.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I"/home/renatobarresi/Renato/CESE_fiuba/Tesis/Code/emat/middleware/littleFS/inc" -I"/home/renatobarresi/Renato/CESE_fiuba/Tesis/Code/emat/middleware/FreeRTOS/Source/include" -I"/home/renatobarresi/Renato/CESE_fiuba/Tesis/Code/emat/middleware/FreeRTOS/Source/portable/gcc/arm_cm4f" -I"/home/renatobarresi/Renato/CESE_fiuba/Tesis/Code/emat/project_cpp/inc" -I"/home/renatobarresi/Renato/CESE_fiuba/Tesis/Code/emat/modules/inc" -I"/home/renatobarresi/Renato/CESE_fiuba/Tesis/Code/emat/middleware" -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"project_cpp/src/applicationManager.d" -MT"project_cpp/src/applicationManager.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "project_cpp/src/applicationManager.o"
-arm-none-eabi-g++ "../project_cpp/src/commandManager.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I"/home/renatobarresi/Renato/CESE_fiuba/Tesis/Code/emat/middleware/littleFS/inc" -I"/home/renatobarresi/Renato/CESE_fiuba/Tesis/Code/emat/middleware/FreeRTOS/Source/include" -I"/home/renatobarresi/Renato/CESE_fiuba/Tesis/Code/emat/middleware/FreeRTOS/Source/portable/gcc/arm_cm4f" -I"/home/renatobarresi/Renato/CESE_fiuba/Tesis/Code/emat/project_cpp/inc" -I"/home/renatobarresi/Renato/CESE_fiuba/Tesis/Code/emat/modules/inc" -I"/home/renatobarresi/Renato/CESE_fiuba/Tesis/Code/emat/middleware" -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"project_cpp/src/commandManager.d" -MT"project_cpp/src/commandManager.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "project_cpp/src/commandManager.o"
-arm-none-eabi-g++ "../project_cpp/src/taskCreator.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I"/home/renatobarresi/Renato/CESE_fiuba/Tesis/Code/emat/middleware/littleFS/inc" -I"/home/renatobarresi/Renato/CESE_fiuba/Tesis/Code/emat/middleware/FreeRTOS/Source/include" -I"/home/renatobarresi/Renato/CESE_fiuba/Tesis/Code/emat/middleware/FreeRTOS/Source/portable/gcc/arm_cm4f" -I"/home/renatobarresi/Renato/CESE_fiuba/Tesis/Code/emat/project_cpp/inc" -I"/home/renatobarresi/Renato/CESE_fiuba/Tesis/Code/emat/modules/inc" -I"/home/renatobarresi/Renato/CESE_fiuba/Tesis/Code/emat/middleware" -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"project_cpp/src/taskCreator.d" -MT"project_cpp/src/taskCreator.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "project_cpp/src/taskCreator.o"
+arm-none-eabi-g++ "../modules/src/SD_module.cpp" -mcpu=cortex-m4 -std=gnu++14 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I"/home/renatobarresi/Renato/CESE_fiuba/Tesis/Code/emat/middleware/littleFS/inc" -I"/home/renatobarresi/Renato/CESE_fiuba/Tesis/Code/emat/middleware/FreeRTOS/Source/include" -I"/home/renatobarresi/Renato/CESE_fiuba/Tesis/Code/emat/middleware/FreeRTOS/Source/portable/gcc/arm_cm4f" -I"/home/renatobarresi/Renato/CESE_fiuba/Tesis/Code/emat/project_cpp/inc" -I"/home/renatobarresi/Renato/CESE_fiuba/Tesis/Code/emat/modules/inc" -I"/home/renatobarresi/Renato/CESE_fiuba/Tesis/Code/emat/middleware" -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -fno-exceptions -fno-rtti -fno-use-cxa-atexit -Wall -fstack-usage -MMD -MP -MF"modules/src/SD_module.d" -MT"modules/src/SD_module.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "modules/src/SD_module.o"
+../modules/src/SD_module.cpp: In member function 'HAL_StatusTypeDef SDCard::readBlock(uint32_t, uint8_t*)':
+../modules/src/SD_module.cpp:182:1: warning: no return statement in function returning non-void [-Wreturn-type]
+  182 | }
+      | ^
+../modules/src/SD_module.cpp: In member function 'HAL_StatusTypeDef SDCard::writeBlock(uint32_t, const uint8_t*)':
+../modules/src/SD_module.cpp:192:1: warning: no return statement in function returning non-void [-Wreturn-type]
+  192 | }
+      | ^
+../modules/src/SD_module.cpp: In member function 'HAL_StatusTypeDef SDCard::readMultipleBlocks(uint32_t, uint32_t, uint8_t*)':
+../modules/src/SD_module.cpp:196:1: warning: no return statement in function returning non-void [-Wreturn-type]
+  196 | }
+      | ^
+../modules/src/SD_module.cpp: In member function 'HAL_StatusTypeDef SDCard::writeMultipleBlocks(uint32_t, uint32_t, const uint8_t*)':
+../modules/src/SD_module.cpp:200:1: warning: no return statement in function returning non-void [-Wreturn-type]
+  200 | }
+      | ^
 arm-none-eabi-g++ -o "EMAT.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/renatobarresi/Renato/CESE_fiuba/Tesis/Code/emat/STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="EMAT.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
 Finished building target: EMAT.elf
  
 arm-none-eabi-size   EMAT.elf 
 arm-none-eabi-objdump -h -S  EMAT.elf  > "EMAT.list"
    text	   data	    bss	    dec	    hex	filename
-  54612	    180	   2264	  57056	   dee0	EMAT.elf
+  54508	    164	   2196	  56868	   de24	EMAT.elf
 Finished building: default.size.stdout
  
 Finished building: EMAT.list

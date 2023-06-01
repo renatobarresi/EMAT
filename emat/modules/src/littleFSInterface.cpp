@@ -6,30 +6,18 @@
  */
 #include <littleFSInterface.h>
 #include "W25Qx_module.h"
+#include "error.h"
 
-SPI_HandleTypeDef hspi1;
-W25Q64 myFlash(&hspi1, GPIOF, GPIO_PIN_13);
-
-FileSystemStatus FSStatus;
-
-FileSystemStatus getStatus()
-{
-	return FSStatus;
-}
-void setStatus(FileSystemStatus status)
-{
-	FSStatus = status;
-}
+W25Q64 myFlash(GPIOF, GPIO_PIN_13);
 
 int flash_init()
 {
-	if (HAL_OK == myFlash.init())
+	if (HAL_OK != myFlash.init())
 	{
-		FSStatus = FileSystemStatus::volumeInit;
+		errorHandler(__FILE__, __LINE__, ERROR_FATAL, "unable to format filesystem");
 	}
 
-	FSStatus = FileSystemStatus::volumeNotInit;
-	return -1;
+	return 1;
 }
 
 int w25q64_read(const struct lfs_config *c, lfs_block_t block,

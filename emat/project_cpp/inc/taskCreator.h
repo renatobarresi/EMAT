@@ -10,5 +10,8 @@
 #ifdef __cplusplus
 
 void createTasks();
+void initOS();
+
+void initVisualLedIndicator();
 
 #endif
